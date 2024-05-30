@@ -9,6 +9,7 @@ import {fontFamily} from '../../constants/style';
 import {useI18n} from '../../hooks/useI18n';
 
 interface IHeaderProps {
+  backgroundColor: string;
   borderColor: string;
   color: string;
   isDarkMode: boolean;
@@ -16,7 +17,8 @@ interface IHeaderProps {
 }
 
 function Header(props: IHeaderProps) {
-  const {borderColor, color, isDarkMode, onColorSchemeChange} = props;
+  const {backgroundColor, borderColor, color, isDarkMode, onColorSchemeChange} =
+    props;
   const {translate} = useI18n();
 
   return (
@@ -38,7 +40,10 @@ function Header(props: IHeaderProps) {
           )}
         </View>
       </TouchableHighlight>
-      <LanguagePicker borderColor={borderColor} />
+      <LanguagePicker
+        backgroundColor={backgroundColor}
+        borderColor={borderColor}
+      />
     </View>
   );
 }

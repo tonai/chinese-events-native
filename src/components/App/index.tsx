@@ -36,6 +36,7 @@ function App(): React.JSX.Element {
           style={{backgroundColor}}>
           <View>
             <Header
+              backgroundColor={backgroundColor}
               borderColor={borderColor}
               color={color}
               isDarkMode={isDarkMode}
